@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:padding="30dp"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/username_tv"
+        android:text="Username"
+        android:textColor="@color/black"
+        android:textSize="20dp"
+        android:textStyle="bold"
+        tools:ignore="MissingConstraints"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="100dp"
+        />
+
+    <EditText
+        android:inputType="text|textNoSuggestions"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Type your username"
+        android:id="@+id/username"
+        tools:ignore="MissingConstraints"
+        android:background="@drawable/edit_text_border"
+        android:textColorHint="#B2BEB5"
+        android:drawableLeft="@drawable/username_vector"
+        android:drawablePadding="10dp"
+        android:padding="5dp"
+        android:textColor="@color/black"
+        app:layout_constraintTop_toBottomOf="@+id/username_tv"
+        android:layout_marginTop="10dp"
+        android:textSize="18dp"
+        />
+
+    <TextView
+        android:id="@+id/password_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="Password"
+        android:textColor="@color/black"
+        android:textSize="20dp"
+        android:textStyle="bold"
+        app:layout_constraintTop_toBottomOf="@+id/username"
+        tools:ignore="MissingConstraints"
+        />
+
+    <EditText
+        android:inputType="textPassword|textNoSuggestions"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Type your password"
+        android:id="@+id/password"
+        tools:ignore="MissingConstraints"
+        android:background="@drawable/edit_text_border"
+        android:textColorHint="#B2BEB5"
+        android:drawableLeft="@drawable/password_vector"
+        android:drawablePadding="10dp"
+        android:padding="5dp"
+        android:textColor="@color/black"
+        app:layout_constraintTop_toBottomOf="@+id/password_tv"
+        android:layout_marginTop="10dp"
+        android:textSize="18dp"
+        />
+
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/signin"
+        android:text="LOGIN"
+        app:layout_constraintTop_toBottomOf="@+id/password"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:layout_marginTop="40dp"
+        android:textColor="@color/white"
+        android:background="@drawable/button_border"
+        />
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/signup"
+        android:clickable="true"
+        app:layout_constraintTop_toBottomOf="@id/signin"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:layout_marginTop="200dp"
+        android:text="Sign up"
+        android:textColor="@color/black"
+        android:textSize="20dp"
+        android:textStyle="bold"
+        />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
