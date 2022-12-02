@@ -1,3 +1,11 @@
 <resources>
     <string name="app_name">NewsApplication</string>
+
+    <string-array name="interest_list">
+        <item>Business</item>
+        <item>Sports</item>
+        <item>Politics</item>
+        <item>Technology</item>
+        <item>Startup</item>
+    </string-array>
 </resources>

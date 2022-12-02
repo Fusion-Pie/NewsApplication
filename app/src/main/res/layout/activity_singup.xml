@@ -4,14 +4,14 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/white"
     android:padding="30dp"
-    tools:context=".MainActivity">
+    android:background="@color/white"
+    tools:context=".singup">
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/username_tv"
+        android:id="@+id/signup_username_tv"
         android:text="Username"
         android:textColor="#40B5AD"
         android:textSize="20dp"
@@ -26,7 +26,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:hint="Type your username"
-        android:id="@+id/username"
+        android:id="@+id/signup_username"
         tools:ignore="MissingConstraints"
         android:background="@drawable/edit_text_border"
         android:textColorHint="#B2BEB5"
@@ -35,13 +35,13 @@
         android:drawablePadding="10dp"
         android:padding="5dp"
         android:textColor="@color/black"
-        app:layout_constraintTop_toBottomOf="@+id/username_tv"
+        app:layout_constraintTop_toBottomOf="@+id/signup_username_tv"
         android:layout_marginTop="10dp"
         android:textSize="18dp"
         />
 
     <TextView
-        android:id="@+id/password_tv"
+        android:id="@+id/signup_password_tv"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
@@ -49,7 +49,7 @@
         android:textColor="#40B5AD"
         android:textSize="20dp"
         android:textStyle="bold"
-        app:layout_constraintTop_toBottomOf="@+id/username"
+        app:layout_constraintTop_toBottomOf="@+id/signup_username"
         tools:ignore="MissingConstraints"
         />
 
@@ -58,7 +58,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:hint="Type your password"
-        android:id="@+id/password"
+        android:id="@+id/signup_password"
         tools:ignore="MissingConstraints"
         android:background="@drawable/edit_text_border"
         android:textColorHint="#B2BEB5"
@@ -67,39 +67,45 @@
         android:drawablePadding="10dp"
         android:padding="5dp"
         android:textColor="@color/black"
-        app:layout_constraintTop_toBottomOf="@+id/password_tv"
+        app:layout_constraintTop_toBottomOf="@+id/signup_password_tv"
         android:layout_marginTop="10dp"
         android:textSize="18dp"
         />
 
+    <TextView
+        android:id="@+id/interest_ls_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="Interest"
+        android:textColor="#40B5AD"
+        android:textSize="20dp"
+        android:textStyle="bold"
+        app:layout_constraintTop_toBottomOf="@+id/signup_password"
+        tools:ignore="MissingConstraints"
+        />
+
+    <Spinner
+        android:layout_width="match_parent"
+        android:layout_height="35dp"
+        android:id="@+id/interest_ls"
+        app:layout_constraintTop_toBottomOf="@id/interest_ls_tv"
+        android:layout_marginTop="10dp"
+        tools:ignore="MissingConstraints"
+        android:background="@drawable/edit_text_border"
+        />
 
     <Button
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/signin"
-        android:text="LOGIN"
-        app:layout_constraintTop_toBottomOf="@+id/password"
+        android:id="@+id/createAccount"
+        android:text="CREATE ACCOUNT"
+        app:layout_constraintTop_toBottomOf="@+id/interest_ls"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintLeft_toLeftOf="parent"
         android:layout_marginTop="40dp"
         android:textColor="@color/white"
         android:background="@drawable/button_border"
-        />
-
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/signup"
-        android:clickable="true"
-        app:layout_constraintTop_toBottomOf="@id/signin"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        android:layout_marginTop="200dp"
-        android:text="Sign up"
-        android:textColor="#40B5AD"
-        android:textSize="20dp"
-        android:textStyle="bold"
         />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

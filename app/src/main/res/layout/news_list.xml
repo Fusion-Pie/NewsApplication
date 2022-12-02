@@ -1,35 +1,69 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     app:cardCornerRadius="11dp"
     app:cardElevation="9dp"
     android:layout_margin="20dp"
-    android:padding="20dp">
+    >
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation="vertical">
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:id="@+id/main_linear"
+        >
 
-        <ImageView
-            android:src="@drawable/password_vector"
-            android:id="@+id/img_newsRequestList"
-            android:layout_margin="10dp"
-            android:layout_width="match_parent"
-            android:layout_height="200dp"/>
-
-        <TextView
-            android:id="@+id/txt_newsRequestList"
-            android:layout_margin="10dp"
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:text="it will fetch news from a server by
-http request using volley library"
-            android:textSize="17sp"
-            android:textColor="@color/black"
-            android:gravity="center"/>
+            android:background="#40B5AD"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:paddingBottom="10dp"
+            android:orientation="vertical">
+
+            <ImageView
+                android:src="@drawable/password_vector"
+                android:id="@+id/img_newsRequestList"
+                android:layout_width="match_parent"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_height="200dp"/>
+
+            <TextView
+                android:id="@+id/txt_newsRequestList"
+                android:layout_margin="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="News text will be displayed here"
+                android:textSize="17sp"
+                android:textColor="@color/white"
+                android:gravity="center"/>
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right"
+            >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:drawableStart="@drawable/share"
+                android:id="@+id/share"
+                android:drawableTint="#40B5AD"
+                tools:ignore="MissingConstraints"
+                android:padding="10dp"
+                />
+
+        </LinearLayout>
 
     </LinearLayout>
 

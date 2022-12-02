@@ -1,36 +1,59 @@
 package com.example.newsapplication;
 
+import androidx.room.ColumnInfo;
+import androidx.room.Entity;
+import androidx.room.PrimaryKey;
+
+@Entity(tableName = "UserTable")
 public class UserDetails {
-    String user_name, password, interest;
 
+    @PrimaryKey(autoGenerate = true)
+    public int id;
 
-    public UserDetails(String user_name, String password, String interest) {
-        this.user_name = user_name;
-        this.password = password;
-        this.interest = interest;
+    @ColumnInfo(name = "User")
+    public String User;
+
+    @ColumnInfo(name = "Password")
+    public String Password;
+
+    @ColumnInfo(name = "Interest")
+    public String Interest;
+
+    public int getId() {
+        return id;
     }
 
-    public String getUser_name() {
-        return user_name;
+    public void setId(int id) {
+        this.id = id;
     }
 
-    public void setUser_name(String user_name) {
-        this.user_name = user_name;
+    public String getUser() {
+        return User;
+    }
+
+    public void setUser(String user) {
+        this.User = user;
     }
 
     public String getPassword() {
-        return password;
+        return Password;
     }
 
     public void setPassword(String password) {
-        this.password = password;
+        this.Password = password;
     }
 
     public String getInterest() {
-        return interest;
+        return Interest;
     }
 
     public void setInterest(String interest) {
-        this.interest = interest;
+        this.Interest = interest;
     }
 }
+
+
+
+
+
+

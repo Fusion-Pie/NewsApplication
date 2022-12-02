@@ -13,7 +13,7 @@
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="100dp"
+            android:layout_height="wrap_content"
             android:orientation="horizontal">
 
             <com.google.android.material.chip.ChipGroup
@@ -31,48 +31,62 @@
                     style="@style/Widget.MaterialComponents.Chip.Filter"
                     android:layout_width="wrap_content"
                     android:layout_height="match_parent"
-                    android:text="all"/>
+                    app:checkedIconTint="@color/white"
+                    app:chipBackgroundColor="#40B5AD"
+                    android:textColor="@color/white"
+                    android:text="All"/>
 
                 <com.google.android.material.chip.Chip
                     android:id="@+id/chip_business"
                     style="@style/Widget.MaterialComponents.Chip.Filter"
                     android:layout_width="wrap_content"
                     android:layout_height="match_parent"
-                    android:text="business"/>
+                    app:checkedIconTint="@color/white"
+                    app:chipBackgroundColor="#40B5AD"
+                    android:textColor="@color/white"
+                    android:text="Business"/>
 
                 <com.google.android.material.chip.Chip
                     android:id="@+id/chip_sports"
                     style="@style/Widget.MaterialComponents.Chip.Filter"
                     android:layout_width="wrap_content"
                     android:layout_height="match_parent"
-                    android:text="sports"/>
+                    app:checkedIconTint="@color/white"
+                    app:chipBackgroundColor="#40B5AD"
+                    android:textColor="@color/white"
+                    android:text="Sports"/>
 
                 <com.google.android.material.chip.Chip
                     android:id="@+id/chip_politics"
                     style="@style/Widget.MaterialComponents.Chip.Filter"
                     android:layout_width="wrap_content"
                     android:layout_height="match_parent"
-                    android:text="politics"/>
+                    app:checkedIconTint="@color/white"
+                    app:chipBackgroundColor="#40B5AD"
+                    android:textColor="@color/white"
+                    android:text="Politics"/>
 
                 <com.google.android.material.chip.Chip
                     android:id="@+id/chip_technology"
                     style="@style/Widget.MaterialComponents.Chip.Filter"
                     android:layout_width="wrap_content"
                     android:layout_height="match_parent"
-                    android:text="technology"/>
+                    app:checkedIconTint="@color/white"
+                    app:chipBackgroundColor="#40B5AD"
+                    android:textColor="@color/white"
+                    android:text="Technology"/>
 
                 <com.google.android.material.chip.Chip
                     android:id="@+id/chip_startup"
                     style="@style/Widget.MaterialComponents.Chip.Filter"
                     android:layout_width="wrap_content"
                     android:layout_height="match_parent"
-                    android:text="startup"/>
+                    app:checkedIconTint="@color/white"
+                    app:chipBackgroundColor="#40B5AD"
+                    android:textColor="@color/white"
+                    android:text="Startup"/>
 
             </com.google.android.material.chip.ChipGroup>
-
-            <View
-                android:layout_width="20dp"
-                android:layout_height="wrap_content"/>
 
         </LinearLayout>
 

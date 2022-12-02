@@ -29,8 +29,6 @@ public class MainActivity2 extends AppCompatActivity {
         chipGroup.setOnCheckedStateChangeListener(new ChipGroup.OnCheckedStateChangeListener() {
             @Override
             public void onCheckedChanged(@NonNull ChipGroup group, @NonNull List<Integer> checkedIds) {
-                Toast.makeText(MainActivity2.this, "" + String.valueOf(checkedIds), Toast.LENGTH_SHORT).show();
-
                 int checked_id = checkedIds.get(0);
 
                 String name = getResources().getResourceName(checked_id).split("/")[1].split("_")[1];

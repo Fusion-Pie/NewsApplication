@@ -9,6 +9,7 @@ public class NewsModel {
         this.url = url;
     }
 
+    // Content of the news
     public String getContent() {
         return content;
     }
@@ -17,6 +18,7 @@ public class NewsModel {
         this.content = content;
     }
 
+    // Image url of the news
     public String getImageUrl() {
         return imageUrl;
     }
@@ -25,6 +27,7 @@ public class NewsModel {
         this.imageUrl = imageUrl;
     }
 
+    // Link of the news which will be used to send other's
     public String getUrl() {
         return url;
     }
