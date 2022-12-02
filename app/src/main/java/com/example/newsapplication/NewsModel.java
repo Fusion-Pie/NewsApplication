@@ -1,11 +1,12 @@
 package com.example.newsapplication;
 
 public class NewsModel {
-    String content, imageUrl;
+    String content, imageUrl, url;
 
-    public NewsModel(String content, String imageUrl) {
+    public NewsModel(String content, String imageUrl, String url) {
         this.content = content;
         this.imageUrl = imageUrl;
+        this.url = url;
     }
 
     public String getContent() {
@@ -22,5 +23,13 @@ public class NewsModel {
 
     public void setImageUrl(String imageUrl) {
         this.imageUrl = imageUrl;
+    }
+
+    public String getUrl() {
+        return url;
+    }
+
+    public void setUrl(String url) {
+        this.url = url;
     }
 }
