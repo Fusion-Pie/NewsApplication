@@ -1,25 +1,21 @@
 package com.example.newsapplication;
 
-import androidx.annotation.NonNull;
-import androidx.appcompat.app.AppCompatActivity;
-
-import android.os.AsyncTask;
+import android.content.Intent;
 import android.os.Bundle;
-import android.view.MenuItem;
+import android.util.Log;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Spinner;
-import android.widget.Toast;
 
-import java.util.ArrayList;
+import androidx.appcompat.app.AppCompatActivity;
 
 public class singup extends AppCompatActivity {
 
     Spinner interest_ls;
-    EditText username, password;
+    private EditText username, password;
     Button singup;
 
     String interest = "";
@@ -32,8 +28,8 @@ public class singup extends AppCompatActivity {
         final MyDatabase myDatabase = new DatabaseHelper().initDb(this);
         final DatabaseDAO databaseDAO = myDatabase.UserDb();
 
-        username = findViewById(R.id.username);
-        password = findViewById(R.id.password);
+        username = findViewById(R.id.signup_username);
+        password = findViewById(R.id.signup_password);
 
         singup = findViewById(R.id.createAccount);
 
@@ -58,18 +54,22 @@ public class singup extends AppCompatActivity {
         singup.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                AsyncTask.execute(new Runnable() {
+                new Thread(new Runnable() {
                     @Override
                     public void run() {
-                        UserDetails userDetails = new UserDetails();
+                        final UserDetails userDetails = new UserDetails();
 
                         userDetails.setUser(username.getText().toString());
                         userDetails.setPassword(password.getText().toString());
-                        userDetails.setInterest("B");
+                        userDetails.setInterest(interest);
 
                         databaseDAO.insertUser(userDetails);
+
+                        Log.d("@debug", "run: data inserted successfully");
+
+                        // Add intent here
                     }
-                });
+                }).start();
             }
         });
     }

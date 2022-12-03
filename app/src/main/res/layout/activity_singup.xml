@@ -22,12 +22,11 @@
         />
 
     <EditText
-        android:inputType="text|textNoSuggestions"
+        android:inputType="text"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:hint="Type your username"
         android:id="@+id/signup_username"
-        tools:ignore="MissingConstraints"
         android:background="@drawable/edit_text_border"
         android:textColorHint="#B2BEB5"
         android:drawableLeft="@drawable/username_vector"
