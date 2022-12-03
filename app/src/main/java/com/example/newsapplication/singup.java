@@ -67,7 +67,8 @@ public class singup extends AppCompatActivity {
 
                         Log.d("@debug", "run: data inserted successfully");
 
-                        // Add intent here
+                        startActivity(new Intent(getApplicationContext(), MainActivity2.class));
+                        finish();
                     }
                 }).start();
             }
